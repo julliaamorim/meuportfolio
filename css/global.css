@@ -1,0 +1,521 @@
+:root {
+	--primary_color: #212121;
+	--secondary_color: #262626;
+	--tertiary_color: #812362;
+	--text_color: #ffff;
+	--mode: 'Dark Mode';
+}
+
+.light-mode {
+	--primary_color: #bdbdbd;
+	--secondary_color: #a9a9a9;
+	--text_color: #000;
+	--mode: 'Light Mode';
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	color: var(--text_color);
+	font-family: system-ui;
+	background-color: var(--primary_color);
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+header {
+	padding: 1em;
+	position: fixed;
+	width: 100%;
+	background: var(--primary_color);
+	text-align: center;
+	width: 100%;
+	z-index: 1;
+}
+
+footer {
+	transition: .6s;
+	height: 5em;
+}
+
+#mode {
+	margin-bottom: .3rem;
+	font-size: .75rem;
+}
+
+#mode::before {
+	content: var(--mode);
+}
+
+.links {
+	font-weight: bold;
+	color: var(--tertiary_color);
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked+.slider {
+	background-color: var(--tertiary_color);
+}
+
+input:focus+.slider {
+	box-shadow: 0 0 1px var(--tertiary_color);
+}
+
+input:checked+.slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+#logo {
+	display: inline;
+	font-weight: 600;
+	width: 10rem;
+	margin-right: 10%;
+	font-size: 1.2rem;
+}
+
+#emoji {
+	background-image: url(../imagens/Imagem_do_WhatsApp_de_2024-08-08_à_s__21.02.56_d0581d23-removebg-preview.png);
+	background-repeat: no-repeat;
+	height: 25rem;
+	width: 19rem;
+	display: inline-block;
+}
+
+.striped {
+	background: var(--secondary_color) !important;
+}
+
+.animation_circle {
+	background: var(--tertiary_color);
+	height: 7rem;
+	width: 7rem;
+	opacity: .2;
+	position: absolute;
+	animation: lado 10s infinite;
+}
+
+.triangle {
+	opacity: .2;
+	width: 0;
+	height: 0;
+	position: absolute;
+	border-left: 3rem solid transparent;
+	border-right: 3rem solid transparent;
+	border-bottom: 5rem solid var(--tertiary_color);
+	margin: 2rem;
+	padding-top: 5rem;
+	z-index: -1;
+	display: inline-block;
+	animation: cima 10s infinite;
+}
+
+.square {
+    opacity: .2;
+    width: 5rem;
+    position: absolute;
+    border-bottom: 5rem solid var(--tertiary_color);
+    margin: -9rem 21rem;
+    padding-top: 5rem;
+    z-index: -1;
+    display: inline-block;
+    animation: baixo 10s infinite;
+}
+
+@keyframes lado {
+	0% {
+		transform: translateX(0%);
+	}
+	50% {
+		background: #5B99C2;
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(1%);
+	}
+}
+
+@keyframes cima {
+	0% {
+		transform: translateY(0%);
+	}
+	50% {
+		border-bottom-color: #5B99C2;
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(1%);
+	}
+}
+
+@keyframes baixo {
+	0% {
+		transform: translateY(100%);
+	}
+	50% {
+		border-bottom-color: #5B99C2;
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(99%);
+	}
+}
+
+.animation-show {
+	visibility: visible;
+	animation: animacao-entrada .7s ease both;
+}
+
+@keyframes animacao-header {
+	0% {
+		transform: translateX(-100%)
+	}
+	100% {
+		transform: translateX(1);
+	}
+}
+
+@keyframes animacao-entrada {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.my_name {
+	color: var(--tertiary_color);
+}
+
+#considerations {
+	text-align: center;
+	padding-top: 2em;
+}
+
+#btn-mobile {
+	display: none;
+}
+
+#apresentation {
+	margin-top: 10rem;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.section {
+	text-align: center;
+	height: 100%;
+	display: flow-root;
+}
+
+#me {
+	background-image: url(../imagens/IMG1.jpg);
+	background-color: var(--tertiary_color);
+	height: 20rem;
+	width: 20rem;
+    
+}
+
+#me:hover {
+	background-color: purple;
+}
+
+#logo_magni {
+	background-image: url(../Assets/magnifinance.jpg);
+}
+
+#logo_trybe {
+	background-image: url(../Assets/trybe.png);
+}
+
+#logo_aka {
+	background-image: url(../Assets/logo_aka.jpg);
+}
+
+#logo_dpworld {
+	background-image: url(../Assets/dpworld_logo.png);
+}
+
+#logo_decskill {
+	background-image: url(../Assets/decskill.jpg);
+}
+
+.round_picture {
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 50%;
+	display: inline-block;
+	height: 10rem;
+	width: 10rem;
+	margin: 2rem;
+}
+
+#banner {
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+	display: inline;
+	font-weight: 600;
+}
+
+li {
+	display: inline;
+	padding-right: 1em;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text_color);
+}
+
+a:hover {
+	color: var(--tertiary_color);
+}
+
+.title {
+	margin: 2rem;
+}
+
+.technology {
+	height: 5rem;
+}
+
+.subtitle {
+	margin-bottom: 1rem;
+}
+
+.description_about {
+	width: 50%;
+	text-align: justify;
+}
+
+.subsection {
+	margin: 2em;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.technology:hover {
+	animation: zoom-in-zoom-out 1s ease forwards;
+}
+
+.section,
+#banner {
+	scroll-margin-top: 4.5em;
+	visibility: hidden;
+}
+
+button {
+	width: 15rem;
+	height: 3.8rem;
+	background: var(--tertiary_color);
+	box-shadow: 0 1.6rem 1.6rem rgb(51 51 51 / 25%);
+	border-radius: 3rem;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	border: none;
+	margin: 1.5rem 0 1.5rem 0;
+	font-size: 1rem;
+}
+
+button:hover {
+	background-color: transparent;
+	border: medium groove var(--tertiary_color);
+	color: var(--tertiary_color);
+}
+
+.card {
+	height: 30rem;
+	width: 22rem;
+	background: var(--secondary_color);
+	border-radius: 1rem;
+	margin: 1rem;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 1rem;
+    border: 0.1rem solid var(--tertiary_color);
+}
+
+#testimonials .card {
+	background: var(--primary_color);
+}
+
+#nif_validator,
+#magniuniversity,
+#good_morning_generator {
+	display: block;
+	margin: auto;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	transition: .2s;
+}
+
+#nif_validator {
+	background-image: url(../Assets/portugal_flag.png);
+}
+
+#magniuniversity {
+	background-image: url(../Assets/university.png);
+	background-color: #3F43A8;
+}
+
+#good_morning_generator {
+	background-image: url(../Assets/bom_dia.png);
+}
+
+#instagram {
+	background-image: url(../Assets/insta.png);
+}
+
+#mayara_portfolio {
+	background-image: url(../Assets/law.png);
+}
+
+#moogle {
+	background-image: url(../Assets/moogle_logo.png);
+}
+
+
+#button_see_git {
+	margin: 2rem;
+}
+
+.testimonial_phrase {
+	font-style: italic;
+	font-size: large;
+}
+
+.testimonial_phrase::before,
+.testimonial_phrase::after {
+	content: '"';
+}
+
+.testimonial_name {
+	margin-top: 1rem;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.testimonial_position {
+	font-style: italic;
+}
+
+#testimonials_content {
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 1rem;
+}
+
+.contacts {
+	background-color: whitesmoke;
+	cursor: pointer;
+	width: 7rem;
+	height: 7rem;
+}
+
+#linkedin {
+	background-image: url(../Assets/linkedin.png);
+}
+
+#email {
+	background-image: url(../imagens/gmail.png);
+}
+
+#phone {
+	background-image: url(../imagens/wpp.png);
+}
+
+.offline {
+    display: none;
+}
+
+.page-slide {
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    background: rgb(180, 180, 180);  
+    margin: 0;
+}
+
+.active {
+    background: var(--tertiary_color);
+}
+
+@keyframes zoom-in-zoom-out {
+	0% {
+		transform: scale(1, 1);
+	}
+	100% {
+		transform: scale(1.1, 1.1);
+	}
+}
+
+::selection {
+	background: var(--tertiary_color);
+}
+
+.tech-stack {
+	margin-top: 5px;
+	font-size: 13px;
+	font-weight: bold;
+}

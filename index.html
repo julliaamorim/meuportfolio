@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="./js/script.js"></script>
+      <link rel="stylesheet" href="./css/global.css">
+      <link rel="stylesheet" href="./css/responsive.css">     
+      <link rel="icon" href="./Assets/emoji_novo.png">
+      <title>julliaamorim.dev</title>
+   </head>   
+   <body>
+      <header>
+         <p id="logo"><a href="#banner" class="my_name"> julliaamorim.dev </a></p>
+         <div id="btn-mobile">
+            <div id="line1" class="line"></div>
+            <div id="line2" class="line"></div>
+            <div id="line3" class="line"></div>
+         </div>         
+         <ul id="menu">
+            <li>
+               <a href="#about"> Sobre </a>
+            </li>
+            <li>
+               <a href="#stacks"> Códigos principais </a> 
+            </li>
+            <li>
+               <a href="#projects"> Projetos </a> 
+            </li>
+            <li>
+               <a href="#contact"> Entre em contato comigo </a> 
+            </li>
+            <li>
+               <div style="display: inline-block;">
+                  <p id="mode"></p>
+                  <label class="switch">
+                  <input type="checkbox" checked onchange="changeTheme()">  
+                  <span class="slider round"></span>              
+            </li>
+            </div>
+         </ul>
+      </header>
+      <main>
+         <div class="round_picture animation_circle"></div>
+         <div id="banner">
+            <div id="apresentation">
+              <div class="square"></div>
+               <div class="triangle"></div>
+               <h4 class="subtitle"> OLÁ! MEU NOME É <span class="my_name"> JULLIA AMORIM! 😄</span></h4>
+               <h4>Amante da Programação apaixonada por criar coisas que impactam vidas por meio da tecnologia.</h4>
+            </div>
+            <div id="emoji"> </div>
+         </div>
+         <div class="striped">
+            <div id="about" class="section">
+               <h1 class="title" >Sobre ✍🏻</h1>
+               <div class="subsection">
+                  <div id="me" class="round_picture"></div>
+                  <div class="subsection description_about">
+                     <p class="subtitle">Sou <b class="my_name">Jullia Amorim</b>, sou apaixonada por tecnologia desde criança, e essa paixão me levou a seguir carreira na área de TI. Nascida em Palmas, Tocantins, mudei-me para Alagoinhas, Bahia, onde resido há 21 anos. Com 23 anos, sou programadora, sempre buscando aprimorar minhas habilidades e conhecimentos.</p>
+                     <p class="subtitle">Minha maior qualidade é servir a Cristo, e isso reflete em todos os aspectos da minha vida, inclusive na minha profissão. Crio bugs há 4 anos, mas também busco constantemente aprender e corrigir meus erros para entregar soluções eficientes.</p>
+                     <p class="subtitle">Além da tecnologia, tenho um grande interesse por esportes, especialmente tênis, e sou apaixonada pela cultura geek e nerd. Adoro passar tempo de qualidade com a minha família e me dedicar ao desenvolvimento de sites, unindo minhas paixões em cada projeto que assumo.
+                     </p>
+                     <p class="subtitle">
+                        Agradeço imensamente por ter dedicado seu tempo para ler até o final. Espero que tenha conseguido transmitir um pouco da minha paixão e dedicação por tecnologia e pela vida. Fico à disposição para qualquer dúvida ou oportunidade de contribuir com meus conhecimentos e habilidades. Obrigada!</p>
+                     <div style="text-align: center;">
+                        <button onclick="createLink('./imagens/Jullia Amorim (2).pdf')">Curriculo aberto</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="stacks" class="section">
+            <h1 class="title">Eu codifico com 💻</h1>
+            <div class="subsection">
+               <img class="technology" src="./imagens/html.png" title="HTML">
+               <img  class="technology" src="./imagens/css_logo.png" title="CSS">
+               <img  class="technology" src="./imagens/javascript-logo-javascript-icon.png" title="JavaScript">
+               <img  class="technology" src="./imagens/react.png" title="React">
+               <img  class="technology" src="./imagens/typescript.png" title="TypeScript">
+            </div>
+            <div class="subsection animation-show">
+               <img class="technology" src="./imagens/vs_code.png" title="Visual Studio Code">
+               <img class="technology" src="./imagens/visual-studio-icon.png" title="Visual Studio">        
+            </div>
+         </div>
+         <div id="projects" class="section">
+            <h1 class="title">Projects 💡</h1>
+            <div class="slide"  id="slide-1">        
+            <div id="button_see_git">
+               <button onclick="createLink('https://github.com/julliaamorim')">Veja meus projetos no Github</button>     
+            </div>
+         <div id="contact" class="section">
+            <h1 class="title">Entre em contato comigo, espero te conhecer em breve. 🤝🏻</h1>
+            <p class="title">Gostou do meu perfil, quer bater um papo? Me chame em qualquer um dos canais abaixo e será um prazer falar com você!</p>
+            <div id="email" class="round_picture contacts" onclick="createLink('https://mailto:julliaamorim.dev@gmail.com')"></div>
+            <div id="phone" class="round_picture contacts" onclick="createLink('https://api.whatsapp.com/send?phone=5575999198824&text=Ol%C3%A1,%20passei%20pelo%20seu%20site!%20Eu%20gostaria%20de%20conversar%20com%20voc%C3%AA.')"></div>
+         </div>
+      </main>
+      <footer class="striped">
+         <p id="considerations"> Criado por Jullia Amorim 👩🏻‍💻🩷</p>
+      </footer>
+   </body>
+</html>
